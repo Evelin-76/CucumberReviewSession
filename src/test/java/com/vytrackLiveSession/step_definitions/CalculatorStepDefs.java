@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class CalculatorStepDefs {
+public class CalculatorStepDefs extends Hooks{
     @Given("I have calculator app open")
     public void iHaveCalulatorAppOpen() {
         System.out.println("Running step: I have calculator app open");

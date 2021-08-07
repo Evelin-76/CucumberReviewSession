@@ -1,5 +1,5 @@
 Feature: Calculator app should be able to calculation
-@wip
+@adding
   Scenario: Adding two numbers
     Given I have calculator app open
     When I add 5 to 7
