@@ -1,5 +1,4 @@
 package com.vytrackLiveSession.pages;
-
 import com.vytrackLiveSession.utilities.BrowserUtils;
 import com.vytrackLiveSession.utilities.Driver;
 import org.openqa.selenium.By;
