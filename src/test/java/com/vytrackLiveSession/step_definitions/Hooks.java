@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
-    @Before
+    @Before()
     public void setUp(){
 
         System.out.println("BEFORE METHOD");
@@ -21,5 +21,14 @@ public class Hooks {
     public void tearDown(){
         Driver.closeDriver();
         System.out.println("AFTER METHOD");
+    }
+    @Before("@calculator")
+    public void setUpCalculator(){
+        System.out.println("Running @Before code only scenario with @calculator tag");
+    }
+
+    @After("@calculator")
+    public void tearDownCalculator(){
+        System.out.println("Running @After code only scenario with @calculator tag");
     }
 }
