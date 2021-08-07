@@ -28,7 +28,7 @@ public class NAvigationStepDefs {
     @Then("the title should be {string}")
     public void theTitleShouldBe(String arg0) {
         String actualTitle = Driver.get().getTitle();
-        Assert.assertEquals(actualTitle,"Car - Entities - System - Car - Entities - System");
+        Assert.assertEquals(actualTitle,"Ca - Entities - System - Car - Entities - System");
     }
 
 

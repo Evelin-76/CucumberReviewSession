@@ -3,6 +3,9 @@ package com.vytrackLiveSession.step_definitions;
 import com.vytrackLiveSession.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 
 import java.util.concurrent.TimeUnit;
@@ -18,17 +21,21 @@ public class Hooks {
         Driver.get().manage().window().maximize();
     }
     @After
-    public void tearDown(){
+    public void tearDown(Scenario scenario){
+        if(scenario.isFailed()){
+            final byte[] screenshot = ( (TakesScreenshot)Driver.get() ).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot,"image/png", "screenshot");
+        }
         Driver.closeDriver();
-        System.out.println("AFTER METHOD");
-    }
-    @Before("@calculator")
-    public void setUpCalculator(){
-        System.out.println("Running @Before code only scenario with @calculator tag");
-    }
 
-    @After("@calculator")
-    public void tearDownCalculator(){
-        System.out.println("Running @After code only scenario with @calculator tag");
     }
+//    @Before("@calculator")
+//    public void setUpCalculator(){
+//        System.out.println("Running @Before code only scenario with @calculator tag");
+//    }
+//
+//    @After("@calculator")
+//    public void tearDownCalculator(){
+//        System.out.println("Running @After code only scenario with @calculator tag");
+//    }
 }
