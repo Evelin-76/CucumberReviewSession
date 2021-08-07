@@ -8,8 +8,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.junit.Test;
 
 public class LoginStepDefs extends Hooks{
+
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
         String loginUrl = ConfigurationReader.get("url");
