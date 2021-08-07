@@ -16,7 +16,6 @@ public class NAvigationStepDefs {
 
     @And("the user enters the sales {string} with {string} information")
     public void theUserEntersTheSalesWithInformation(String username, String password) {
-        BrowserUtils.waitFor(2);
         new LoginPage().login(username,password);
     }
 
