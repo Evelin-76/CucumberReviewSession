@@ -1,19 +1,25 @@
 package com.vytrackLiveSession.step_definitions;
 
 import com.vytrackLiveSession.utilities.Driver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+
 
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
-    @BeforeMethod
+    @Before
     public void setUp(){
+
+        System.out.println("BEFORE METHOD");
+
         Driver.get().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         Driver.get().manage().window().maximize();
     }
-    @AfterMethod
-    public void tearsDown(){
-        Driver.closeDriver();}
+    @After
+    public void tearDown(){
+        Driver.closeDriver();
+        System.out.println("AFTER METHOD");
+    }
 }

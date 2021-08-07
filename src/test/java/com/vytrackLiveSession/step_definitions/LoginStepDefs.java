@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class LoginStepDefs extends Hooks{
+public class LoginStepDefs{
 
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
