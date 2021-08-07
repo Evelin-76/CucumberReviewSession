@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features",
                  glue = "com/vytrackLiveSession/step_definitions",
                  dryRun = false,
-                 tags = "@calculator"
+                 tags = "@wip"
             )
 
 public class CukesRunner {
