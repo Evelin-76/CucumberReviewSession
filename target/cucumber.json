@@ -1,0 +1,163 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-28T19:17:39.841Z",
+        "before": [
+          {
+            "result": {
+              "duration": 905000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrackLiveSession.step_definitions.Hooks.setUpdb()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2535000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrackLiveSession.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "",
+        "description": "",
+        "id": "contact-page;",
+        "after": [
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrackLiveSession.step_definitions.Hooks.tearDowndb()"
+            }
+          },
+          {
+            "result": {
+              "duration": 851000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrackLiveSession.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1598000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.vytrackLiveSession.step_definitions.LoginStepDefs.theUserIsOnTheLoginPage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1993000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user enters the driver information",
+            "match": {
+              "location": "com.vytrackLiveSession.step_definitions.LoginStepDefs.theUserEntersTheDriverInformation()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user logged in as \"sales manager\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sales manager\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.vytrackLiveSession.step_definitions.NAvigationStepDefs.theUserLoggedInAs(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1308000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user navigate to \"Customers\" \"Contacts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Customers\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"Contacts\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.vytrackLiveSession.step_definitions.ContactStepDefs.userNavigateTo(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5073000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user clicks the \"mbrackstone9@example.com\" from contacts",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"mbrackstone9@example.com\"",
+                  "offset": 20
+                }
+              ],
+              "location": "com.vytrackLiveSession.step_definitions.ContactStepDefs.theUserClicksTheFromContacts(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3225000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the information should be same with database",
+            "match": {
+              "location": "com.vytrackLiveSession.step_definitions.ContactStepDefs.theInformationShouldBeSameWithDatabase()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@db"
+          }
+        ]
+      }
+    ],
+    "name": "contact page",
+    "description": "",
+    "id": "contact-page",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/conctactFromDB.feature",
+    "tags": []
+  }
+]
