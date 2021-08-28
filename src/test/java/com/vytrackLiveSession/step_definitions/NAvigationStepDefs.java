@@ -32,4 +32,8 @@ public class NAvigationStepDefs {
     }
 
 
+    @Given("the user logged in as {string}")
+    public void theUserLoggedInAs(String arg0) {
+
+    }
 }

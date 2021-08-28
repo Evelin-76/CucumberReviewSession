@@ -1,5 +1,6 @@
 package com.vytrackLiveSession.step_definitions;
 
+import com.vytrackLiveSession.utilities.DBUtils;
 import com.vytrackLiveSession.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -28,6 +29,18 @@ public class Hooks {
         }
         Driver.closeDriver();
 
+    }
+    @Before("@db")
+    public void setUpdb(){
+        System.out.println("DataBase conection in BEFORE method");
+        //create conex
+        DBUtils.createConnection();
+    }
+    @After("@db")
+    public void tearDowndb() {
+        System.out.println("DataBAse conection in AFTER method");
+        //close conex
+        DBUtils.destroy();
     }
 //    @Before("@calculator")
 //    public void setUpCalculator(){
